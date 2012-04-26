@@ -1,0 +1,33 @@
+{
+  "name": "jquery.pullquote",
+  "title": "jQuery Pullquote",
+  "description": "A jQuery plugin to pull out quotes into new elements for styling on the page.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jackfranklin/jquery.pullquote",
+  "author": {
+    "name": "Jack Franklin",
+    "email": "jack@jackfranklin.net",
+    "url": "www.javascriptplayground.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jackfranklin/jquery.pullquote.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jackfranklin/jquery.pullquote/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jackfranklin/jquery.pullquote/blob/master/LICENSE-MIT"
+    },
+    {
+      "type": "GPL",
+      "url": "https://github.com/jackfranklin/jquery.pullquote/blob/master/LICENSE-GPL"
+    }
+  ],
+  "dependencies": {
+    "jquery": "~1.5"
+  },
+  "keywords": []
+}
