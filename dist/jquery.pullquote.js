@@ -1,10 +1,6 @@
-/*
- * jquery.pullquote
- * https://github.com/jackfranklin/jquery.pullquote
- *
- * Copyright (c) 2012 Jack Franklin
- * Licensed under the MIT, GPL licenses.
- */
+/*! jQuery Pullquote - v0.1.0 - 2012-04-26
+* https://github.com/jackfranklin/jquery.pullquote
+* Copyright (c) 2012 Jack Franklin; Licensed MIT, GPL */
 
 ;(function($) {
   $.fn.pullQuote = function(opts) {

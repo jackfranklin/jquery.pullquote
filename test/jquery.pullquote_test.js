@@ -22,36 +22,39 @@
       raises(block, [expected], [message])
   */
 
-  module('jQuery#awesome', {
-    setup: function() {
-      this.elems = $('#qunit-fixture').children();
-    }
+  test("defaults", function() {
+    ok($.fn.pullQuote.options, "options set up correctly");
+    equal($.fn.pullQuote.options.insertAfter, "elem", "default global options are set");
+    $.fn.pullQuote.options.insertAfter = "test";
+    equal($.fn.pullQuote.options.insertAfter, "test", "can change the defaults globally");
   });
 
-  test('is chainable', 1, function() {
-    // Not a bad test to run on collection methods.
-    strictEqual(this.elems.awesome(), this.elems, 'should be chaninable');
+  test("chainable", function() {
+    ok($("p span").pullQuote().addClass("testing"), "can be chained");
+    equal($("p span").attr("class"), "testing", "class was added correctly from chaining");
   });
 
-  test('is awesome', 1, function() {
-    strictEqual(this.elems.awesome().text(), 'awesomeawesomeawesome', 'should be thoroughly awesome');
+  test("functionality", function() {
+    $("p span").pullQuote({
+      insertAfter: "div h2"
+    });
+    ok($("div blockquote"), "the blockquote has been created");
+    equal($("div blockquote").text(), "with a totally awesome quote", "it gets the right text");
+    ok($("div blockquote").hasClass("pullquote"), "applies class correctly");
+
   });
 
-  module('jQuery.awesome');
-
-  test('is awesome', 1, function() {
-    strictEqual($.awesome(), 'awesome', 'should be thoroughly awesome');
+  test("changing defaults", function() {
+    $("p span").pullQuote({
+      insertAfter: "div h2",
+      outputClass: "testQuote",
+      outputElem: "p"
+    });
+    ok($("div p.testQuote"), "the blockquote has been created");
+    equal($("div p.testQuote").text(), "with a totally awesome quote", "it gets the right text");
   });
 
-  module(':awesome selector', {
-    setup: function() {
-      this.elems = $('#qunit-fixture').children();
-    }
-  });
 
-  test('is awesome', 1, function() {
-    // Use deepEqual & .get() when comparing jQuery objects.
-    deepEqual(this.elems.filter(':awesome').get(), this.elems.last().get(), 'knows awesome when it sees it');
-  });
+
 
 }(jQuery));
