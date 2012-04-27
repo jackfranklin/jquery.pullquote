@@ -38,7 +38,7 @@
     $("p span").pullQuote({
       insertAfter: "div h2"
     });
-    ok($("div blockquote"), "the blockquote has been created");
+    ok($("div blockquote").length, "the blockquote has been created");
     equal($("div blockquote").text(), "with a totally awesome quote", "it gets the right text");
     ok($("div blockquote").hasClass("pullquote"), "applies class correctly");
 
@@ -50,7 +50,7 @@
       outputClass: "testQuote",
       outputElem: "p"
     });
-    ok($("div p.testQuote"), "the blockquote has been created");
+    ok($("div p.testQuote").length, "the blockquote has been created");
     equal($("div p.testQuote").text(), "with a totally awesome quote", "it gets the right text");
   });
 
