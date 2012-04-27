@@ -1,4 +1,4 @@
-/*! jQuery Pullquote - v0.1.0 - 2012-04-26
+/*! jQuery Pullquote - v0.1.0 - 2012-04-27
 * https://github.com/jackfranklin/jquery.pullquote
 * Copyright (c) 2012 Jack Franklin; Licensed MIT, GPL */
 
